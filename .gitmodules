@@ -1,0 +1,9 @@
+[submodule "webapp-frontend"]
+	path = webapp-frontend
+	url = https://github.com/ommagdum/webapp-frontend.git
+[submodule "webapp-backend"]
+	path = webapp-backend
+	url = https://github.com/ommagdum/webapp-backend.git
+[submodule "webapp-ml"]
+	path = webapp-ml
+	url = https://github.com/ommagdum/webapp-ml.git
