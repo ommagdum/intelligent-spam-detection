@@ -1,0 +1,19 @@
+name: Keep all services alive
+
+on:
+  schedule:
+    - cron: '*/12 * * * *'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Spring Boot API
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" https://webapp-backend-1z5k.onrender.com/ping)
+          echo "Spring Boot ping: $STATUS"
+
+      - name: Ping Flask ML server
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" https://webapp-ml-7sjr.onrender.com/ping)
+          echo "Flask ping: $STATUS"
