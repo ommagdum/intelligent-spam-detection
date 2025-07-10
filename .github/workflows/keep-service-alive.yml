@@ -2,7 +2,7 @@ name: Keep all services alive
 
 on:
   schedule:
-    - cron: '*/12 * * * *'
+    - cron: '*/14 * * * *'
   workflow_dispatch:
 
 jobs:
