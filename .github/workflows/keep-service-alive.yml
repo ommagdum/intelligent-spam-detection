@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Ping Spring Boot API
         run: |
-          STATUS=$(curl -o /dev/null -s -w "%{http_code}" https://webapp-backend-1z5k.onrender.com/ping)
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" https://webapp-backend-6jt4.onrender.com/ping)
           echo "Spring Boot ping: $STATUS"
 
       - name: Ping Flask ML server
